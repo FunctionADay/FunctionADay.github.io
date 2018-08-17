@@ -51,39 +51,15 @@ figure(2)%more good form
 image(alpha)%our updated image
 ```
 
-Well, that was 8 lines of code to clearly demonstrate!! Hope this little tutorial has helped. Luckily, while doing research for this episode I've come across an actual error in MATLAB's documentation, so I've got a little material left to talk about.
-
-[`TransparentColor`](https://www.mathworks.com/help/matlab/ref/imwrite.html#btv3cny-1-TransparentColor) defines what the "transparentness" in your image should show as when you're using `imwrite`. But there's a problem. Let's try adding their example to our imwrite line above. Simply add a hint of: `'TransparentColor',20`
-
-```
-imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230),'TransparentColor',20);
-```
-
-run it and.... we get an error???
-
-```
-Error using writepng>CheckTextItem (line 378)
-Text chunk must be a character vector.
-
-Error in writepng (line 258)
-        item = CheckTextItem(unmatched.(param_name));
-
-Error in imwrite (line 485)
-        feval(fmt_s.write, data, map, filename, paramPairs{:});
-```
-Weird. A little googling shows what one migth expect, that we're feeding something other than a character vector where a character vector belongs. But we know our code works before we add the example so... could it be??? Let's make that last argument a character vector.
-
-```
-imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230),'TransparentColor','20');
-```
-
-
+Well, that was 8 lines of code to clearly demonstrate!! Hope this little tutorial has helped. 
 
 
 
 
 # Episode 1
 ## `isempty()`, and why this series needs to exist
+
+To watch this demonstration visit []()
 
 First, what is `isempty()` well, just as the name implies it's the MATLAB function for checking if an array is empty. That's it. It doesn't check for what type of array it is, it just checks if there is something there and then says "ok cool, yep there's is(n't) something there"
 
