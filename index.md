@@ -6,7 +6,7 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 
 Epidsodes are listed from newest to oldest.
 
-- [Episode 1](#Function-A-Day-Keeps-the-Brain-Lag-Away)
+- [Episode 1](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist)
 
 
 
@@ -49,4 +49,6 @@ alpha =
 No alpha channel is present, so alpha is empty.
 ```
 My only hope would be that this was just a placeholder until they start to include a transparent image so that they can show actual code example, but until then, we'll have to wait for episode two!!
+
+These will hopefully serve as useful reference points on not only the functionality of some MATLAB and Octave functions, but also how they interact and behave.
 
