@@ -47,7 +47,7 @@ Well... That was easy. Let's check out what that image looks like!
 figure(1)%good form
 image(B,'AlphaData',alpha)%our base image
 figure(2)%more good form
-image(Alpha)%our updated image
+image(alpha)%our updated image
 ```
 
 Well, that was 8 lines of code to clearly demonstrate!! Hope this little tutorial has helped. Luckily, while doing research for this episode I've come across an actual error in MATLAB's documentation, so I've got a little material left to talk about.
