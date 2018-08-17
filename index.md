@@ -7,10 +7,10 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 Epidsodes are listed from oldest to newest, and archived in the reverse.
 
 - [Episode 1 - isempty, and why this series needs to exist](#episode-1:-isempty,-and-why-this-series-needs-to-exist)
-- [Episode 2 - A useful example of imread's transparency detection](#episode-2:-a-useful-example-of-imread's-transparency-detection)
+- [Episode 2 - A useful example of imread's transparency detection](episode2)
 
 
-# Episode 2: A useful example of imread's transparency detection
+# Episode 2: A useful example of imread's transparency detection [episode2] #
 
 In [Episode 1](#Episode-1:-isempty,-and-why-this-series-needs-to-exist) I expressed my frustration that the imread function ,which is almost certainly a user's first exposure to the image processing toolbox, is so poorly documented. Today we'll fix that.
 
