@@ -6,13 +6,13 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 
 Epidsodes are listed from oldest to newest, and archived in the reverse.
 
-- [Episode 1 - isempty, and why this series needs to exist](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist)
-- [Episode 2 - A useful example of imread's transparency detection](###Episode-2-\--A-useful-example-of-imread's-transparency-detection)
+- [Episode 1 - isempty, and why this series needs to exist](#Episode-1-\--isempty,-and-why-this-series-needs-to-exist)
+- [Episode 2 - A useful example of imread's transparency detection](#Episode-2-\--A-useful-example-of-imread's-transparency-detection)
 
 
-### Episode 2 - A useful example of imread's transparency detection
+# Episode 2 - A useful example of imread's transparency detection
 
-In [Episode 1](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist) I expressed my frustration that the imread function ,which is almost certainly a user's first exposure to the image processing toolbox, is so poorly documented. Today we'll fix that.
+In [Episode 1](#Episode-1-\--isempty,-and-why-this-series-needs-to-exist) I expressed my frustration that the imread function ,which is almost certainly a user's first exposure to the image processing toolbox, is so poorly documented. Today we'll fix that.
 
 The issue is with the example of the transparent case `[A,map,transparency] = imread(___)` shows the case where an image *doesn't* have a transparent layer. Certainly it's important to know that it returns the empty set but `if the image does not have a transparent layer, the empty set is assigned to transparency` would suffice.
 
@@ -81,7 +81,7 @@ imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230),'TransparentColor','20'
 
 
 
-### Episode 1 - isempty, and why this series needs to exist
+# Episode 1 - isempty, and why this series needs to exist
 
 First, what is `isempty()` well, just as the name implies it's the MATLAB function for checking if an array is empty. That's it. It doesn't check for what type of array it is, it just checks if there is something there and then says "ok cool, yep there's is(n't) something there"
 
