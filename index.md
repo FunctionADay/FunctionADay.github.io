@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Function A Day Keeps the Brain Lag Away
 
 You can use the [editor on GitHub](https://github.com/FunctionADay/FunctionADay.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
