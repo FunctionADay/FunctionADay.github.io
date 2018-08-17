@@ -7,7 +7,7 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 Epidsodes are listed from oldest to newest, and archived in the reverse.
 
 - [Episode 1 - isempty, and why this series needs to exist](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist)
-- [Episode 2 - A useful example of imread's transparency detection](### Episode-2-\--A-useful-example-of-imread's-transparency-detection)
+- [Episode 2 - A useful example of imread's transparency detection](###Episode-2-\--A-useful-example-of-imread's-transparency-detection)
 
 
 ### Episode 2 - A useful example of imread's transparency detection
