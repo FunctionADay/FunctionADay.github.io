@@ -6,7 +6,7 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 
 Epidsodes are listed from newest to oldest.
 
-- [Episode 1](#Function A Day Keeps the Brain Lag Away)
+- [Episode 1](#Function-A-Day-Keeps-the-Brain-Lag-Away)
 
 
 
