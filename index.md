@@ -45,7 +45,7 @@ Well... That was easy. Let's check out what that image looks like!
 
 ```
 figure(1)%good form
-image(B,'AlphaData',Alpha)%our base image
+image(B,'AlphaData',alpha)%our base image
 figure(2)%more good form
 image(Alpha)%our updated image
 ```
