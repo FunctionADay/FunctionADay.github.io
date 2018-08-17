@@ -4,9 +4,80 @@
 
 This is the blog companion of [this YouTube Series.](linkherelol). Sub and click the bell to get all the notifications
 
-Epidsodes are listed from newest to oldest.
+Epidsodes are listed from oldest to newest, and archived in the reverse.
 
-- [Episode 1](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist)
+- [Episode 1 - isempty, and why this series needs to exist](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist)
+- [Episode 2 - A useful example of imread's transparency detection](### Episode-2-\--A-useful-example-of-imread's-transparency-detection)
+
+
+### Episode 2 - A useful example of imread's transparency detection
+
+In [Episode 1](###Episode-1-\--isempty,-and-why-this-series-needs-to-exist) I expressed my frustration that the imread function ,which is almost certainly a user's first exposure to the image processing toolbox, is so poorly documented. Today we'll fix that.
+
+The issue is with the example of the transparent case `[A,map,transparency] = imread(___)` shows the case where an image *doesn't* have a transparent layer. Certainly it's important to know that it returns the empty set but `if the image does not have a transparent layer, the empty set is assigned to transparency` would suffice.
+
+So let's write an example of our own, starting with the example that the documentation gives us. We have:
+
+```MATLAB
+>> [X,map,alpha] = imread('peppers.png');
+>> isempty(alpha)
+
+ans =
+
+  logical
+
+   1
+```
+
+I think our goals should be 1) use peppers.png as our base image, 2) as few lines as possible
+
+```MATLAB
+
+A = imread('peppers.png');%load in pepper.png
+imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230));%make the image completely transparent where the pepers are red and write to a new image
+[X,map,alpha] = imread('transpepper.png');%read in the new image and check if there is a transparent layer
+                                          %note that these are the same lines as the original documentation
+isempty(alpha)
+
+```
+
+Well... That was easy. Let's check out what that image looks like!
+
+```
+figure(1)%good form
+image(B,'AlphaData',Alpha)%our base image
+figure(2)%more good form
+image(Alpha)%our updated image
+```
+
+Well, that was 8 lines of code to clearly demonstrate!! Hope this little tutorial has helped. Luckily, while doing research for this episode I've come across an actual error in MATLAB's documentation, so I've got a little material left to talk about.
+
+[`TransparentColor`](https://www.mathworks.com/help/matlab/ref/imwrite.html#btv3cny-1-TransparentColor) defines what the "transparentness" in your image should show as when you're using `imwrite`. But there's a problem. Let's try adding their example to our imwrite line above. Simply add a hint of: `'TransparentColor',20`
+
+```
+imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230),'TransparentColor',20);
+```
+
+run it and.... we get an error???
+
+```
+Error using writepng>CheckTextItem (line 378)
+Text chunk must be a character vector.
+
+Error in writepng (line 258)
+        item = CheckTextItem(unmatched.(param_name));
+
+Error in imwrite (line 485)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+```
+Weird. A little googling shows what one migth expect, that we're feeding something other than a character vector where a character vector belongs. But we know our code works before we add the example so... could it be??? Let's make that last argument a character vector.
+
+```
+imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230),'TransparentColor','20');
+```
+
+
+
 
 
 
