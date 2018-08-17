@@ -39,9 +39,9 @@ alpha =
 
      []
      
-     ```
+```
      
-     ```
+```
 No alpha channel is present, so alpha is empty.
 ```
 My only hope would be that this was just a placeholder until they start to include a transparent image so that they can show actual code example, but until then, we'll have to wait for episode two!!
