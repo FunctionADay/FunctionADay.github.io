@@ -2,7 +2,7 @@
 
 ## What is this site?
 
-This is the blog companion of [this YouTube Series.](linkherelol)
+This is the blog companion of [this YouTube Series.](linkherelol). Sub and click the bell to get all the notifications
 
 Epidsodes are listed from newest to oldest.
 
@@ -46,20 +46,3 @@ No alpha channel is present, so alpha is empty.
 ```
 My only hope would be that this was just a placeholder until they start to include a transparent image so that they can show actual code example, but until then, we'll have to wait for episode two!!
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
