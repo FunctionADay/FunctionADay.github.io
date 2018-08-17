@@ -6,7 +6,7 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 
 Epidsodes are listed from newest to oldest.
 
-- [Episode 1](### Episode 1 - isempty, and why this series needs to exist)
+- [Episode 1](###Episode 1 - isempty, and why this series needs to exist)
 
 
 
