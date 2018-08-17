@@ -6,11 +6,12 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 
 Epidsodes are listed from oldest to newest, and archived in the reverse.
 
-- [Episode 1 - isempty, and why this series needs to exist](#episode-1-isempty-and-why-this-series-needs-to-exist)
-- [Episode 2 - A useful example of imread's transparency detection](#episode2)
+- [Episode 1 - isempty, and why this series needs to exist](#episode-1)
+- [Episode 2 - A useful example of imread's transparency detection](#episode-2)
 
 
-# Episode 2: A useful example of imread's transparency detection [episode2] #
+# Episode 2
+## A useful example of `imread()`'s transparency detection
 
 In [Episode 1](#Episode-1:-isempty,-and-why-this-series-needs-to-exist) I expressed my frustration that the imread function ,which is almost certainly a user's first exposure to the image processing toolbox, is so poorly documented. Today we'll fix that.
 
@@ -81,7 +82,8 @@ imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230),'TransparentColor','20'
 
 
 
-# Episode 1: isempty, and why this series needs to exist
+# Episode 1
+## `isempty()`, and why this series needs to exist
 
 First, what is `isempty()` well, just as the name implies it's the MATLAB function for checking if an array is empty. That's it. It doesn't check for what type of array it is, it just checks if there is something there and then says "ok cool, yep there's is(n't) something there"
 
