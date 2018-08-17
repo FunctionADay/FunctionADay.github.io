@@ -34,7 +34,7 @@ I think our goals should be 1) use peppers.png as our base image, 2) as few line
 ```MATLAB
 
 A = imread('peppers.png');%load in pepper.png
-imwrite(A,'transpepper.png','Alpha',double(A(:,:,1)>230));%make the image completely transparent where the pepers are red and write to a new image
+imwrite(X,'transpepper.png','Alpha',double(A(:,:,1)>230));%make the image completely transparent where the pepers are red and write to a new image
 [X,map,alpha] = imread('transpepper.png');%read in the new image and check if there is a transparent layer
                                           %note that these are the same lines as the original documentation
 isempty(alpha)
