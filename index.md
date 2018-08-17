@@ -18,27 +18,28 @@ MATLAB is known as a language that is learn in large part because of its general
 
 We want to check to see if an image has a transparent layer. We do that by loading the image an checking if the alpha variable (where the transparent layer would be) `isempty()`.
 
-`>> [X,map,alpha] = imread('peppers.png');
+```
+>> [X,map,alpha] = imread('peppers.png');
 >> isempty(alpha)
 
 ans =
 
   logical
 
-   1`
-   
+   1
+```
 Sure enough it is!!
 
 Now, back to my rant. Why on earth is the documentation for the `imread()` case where you have a transparent layer the counterexample!! The example from the MATLAB docs is copied below.
 
-`
+```
 [X,map,alpha] = imread('peppers.png');
 alpha
 alpha =
 
      []
 No alpha channel is present, so alpha is empty.
-`
+```
 My only hope would be that this was just a placeholder until they start to include a transparent image so that they can show actual code example, but until then, we'll have to wait for episode two!!
 
 ```markdown
