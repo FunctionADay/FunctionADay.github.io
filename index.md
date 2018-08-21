@@ -8,7 +8,7 @@ Epidsodes are listed from oldest to newest, and archived in the reverse.
 
 - [Episode 1 - isempty, and why this series needs to exist](#episode-1)
 - [Episode 2 - A useful example of imread's transparency detection](#episode-2)
-- [Epidsode 3 - A not-so-basic guide to MATLAB naming convention](#episode-3)
+- [Episode 3 - A not-so-basic guide to MATLAB naming convention](#episode-3)
 
 # Episode 3
 ## A not-so-basic guide to MATLAB naming convention
