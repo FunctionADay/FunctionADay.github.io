@@ -8,6 +8,79 @@ Epidsodes are listed from oldest to newest, and archived in the reverse.
 
 - [Episode 1 - isempty, and why this series needs to exist](#episode-1)
 - [Episode 2 - A useful example of imread's transparency detection](#episode-2)
+- [Epidsode 3 - A not-so-basic guide to MATLAB naming convention](#episode-3)
+
+# Episode 3
+## A not-so-basic guide to MATLAB naming convention
+
+It's important in any language, but in MATLAB in particular, to make sure that you're not using a protected variable or function handles. MATLAB actually has a function ( `iskeyword` ) that returns a list if you ever forget which names you cannot use. This is great, but in these instances, MATLAB will actually stop you and tell you that you cannot use these in the way that you're trying to.
+
+```
+>> iskeyword
+
+ans =
+
+  20×1 cell array
+
+    {'break'     }
+    {'case'      }
+    {'catch'     }
+    {'classdef'  }
+    {'continue'  }
+    {'else'      }
+    {'elseif'    }
+    {'end'       }
+    {'for'       }
+    {'function'  }
+    {'global'    }
+    {'if'        }
+    {'otherwise' }
+    {'parfor'    }
+    {'persistent'}
+    {'return'    }
+    {'spmd'      }
+    {'switch'    }
+    {'try'       }
+    {'while'     }
+>> break =3 
+break =3 
+      ↑
+Error: Incorrect use of '=' operator. To assign a value to a variable, use '='. To compare values for equality, use '=='.
+    
+```
+
+But obviously you don't want to write over a function, especially not our good friend `imread()`
+
+```
+>> imread = (1:2)
+
+imread =
+
+     1     2
+
+>> imread('image.jpg')
+Index exceeds array bounds.
+
+'imread' appears to be both a function and a variable. If this is unintentional, use 'clear imread' to remove the variable 'imread'
+from the workspace.
+```
+UhOh... 
+
+Now this wouldn't really be a problem if the [styleguides for MATLAB](https://www.google.com/search?rlz=1C1NHXL_enUS801US801&ei=FCN7W-G-N8jusQWSuJXoBw&q=filtype%3Apdf+matlab+naming+convention&oq=filtype%3Apdf+matlab+naming+convention&gs_l=psy-ab.3...3168.5678.0.5919.12.12.0.0.0.0.122.753.11j1.12.0....0...1.1.64.psy-ab..0.3.205...0i13k1j0i8i7i30k1j0i13i30k1j0i8i13i30k1.0.-HCmvnoKm68) didn't almost universally suggest lowerCamelCase as the prefered naming convention for variables. The concensus is that since this is a common naming convention in other languages as well, might as well use it for MATLAB. However my experience as a TA has taught me that this should NOT be encouraged (at least among students).
+
+If you were to teach students lowerCamelCase as your naming convention, then told them to import and read an image, you can't mark them for trying:
+
+```
+>> image = image('peppers.png')
+Error using image
+Color data must be numeric or logical values.
+```
+
+And unfortunately googling for that error code is rather [unhelpful](https://www.google.com/search?q=Error+using+image+Color+data+must+be+numeric+or+logical+values.&rlz=1C1NHXL_enUS801US801&oq=Error+using+image+Color+data+must+be+numeric+or+logical+values.&aqs=chrome..69i57.631j0j9&sourceid=chrome&ie=UTF-8). So now you're stuck explaining, "well of course you shouldn't have named it the same as a function, what were you thinking?" but that makes you seem *kinda* like a dick. Fundamentally the problem with lowerCamelCase is that it necessitates lowercase first words and *many* of the functions new users to MATLAB will be encountering could (very reasonably) used as variable names. So what's the solution?
+
+UpperCamelCase! Some will say well what about things like `VideoWriter` and then I would say "well what about things like `writeVideo`!!!
+
+My personal opinion is that if you teach UpperCamelCase to a new MATLAB user, by the time where they may encounter functions they can overwrite they will have already learned enough to debug their error.
 
 
 # Episode 2
