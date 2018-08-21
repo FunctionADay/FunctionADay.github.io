@@ -6,9 +6,20 @@ This is the blog companion of [this YouTube Series.](linkherelol). Sub and click
 
 Epidsodes are listed from oldest to newest, and archived in the reverse.
 
-- [Episode 1 - isempty, and why this series needs to exist](#episode-1)
-- [Episode 2 - A useful example of imread's transparency detection](#episode-2)
-- [Episode 3 - A not-so-basic guide to MATLAB naming convention](#episode-3)
+- [Episode 1 - isempty, and why this series needs to exist - 16/08/18](#episode-1)
+- [Episode 2 - A useful example of imread's transparency detection - 17/08/18](#episode-2)
+- [Episode 3 - A not-so-basic guide to MATLAB naming convention - 20/08/18](#episode-3)
+
+# Episode 4
+## Indexing in MATLAB and why indexing from 1 isn't the devil it is made to be
+
+
+
+
+
+
+
+
 
 # Episode 3
 ## A not-so-basic guide to MATLAB naming convention
@@ -71,12 +82,15 @@ Now this wouldn't really be a problem if the [styleguides for MATLAB](https://ww
 If you were to teach students lowerCamelCase as your naming convention, then told them to import and read an image, you can't mark them for trying:
 
 ```
->> image = image('peppers.png')
-Error using image
-Color data must be numeric or logical values.
+>> image = imread('peppers.png');
+>> image(image)
+Array indices must be positive integers or logical values.
+
+'image' appears to be both a function and a variable. If this is unintentional, use 'clear image' to remove the variable 'image'
+from the workspace.
 ```
 
-And unfortunately googling for that error code is rather [unhelpful](https://www.google.com/search?q=Error+using+image+Color+data+must+be+numeric+or+logical+values.&rlz=1C1NHXL_enUS801US801&oq=Error+using+image+Color+data+must+be+numeric+or+logical+values.&aqs=chrome..69i57.631j0j9&sourceid=chrome&ie=UTF-8). So now you're stuck explaining, "well of course you shouldn't have named it the same as a function, what were you thinking?" but that makes you seem *kinda* like a dick. Fundamentally the problem with lowerCamelCase is that it necessitates lowercase first words and *many* of the functions new users to MATLAB will be encountering could (very reasonably) used as variable names. So what's the solution?
+And unfortunately googling for that error code is rather unhelpful. So now you're stuck explaining, "well of course you shouldn't have named it the same as a function, what were you thinking?" but that makes you seem *kinda* like a dick. Plus, even if you tell them this upfront, new users aren't going to have nearly the same level of encyclopedic knowledge of MATLAB function names to avoid. Fundamentally the problem with lowerCamelCase is that it necessitates lowercase first words and *many* of the functions new users to MATLAB will be encountering could (very reasonably) used as variable names. . So what's the solution?
 
 UpperCamelCase! Some will say well what about things like `VideoWriter` and then I would say "well what about things like `writeVideo`!!!
 
