@@ -15,7 +15,7 @@ Epidsodes are listed from oldest to newest, and archived in the reverse.
 I've also got some writups, including presentations, on different topics that I've presented on. Normally for my (now former) TA comrades, or for the students of ENGI 1331.
 
 - [Presentations](/Presentations)
-  -[Figuring Out the Company for You](/Presentations/CorporateFit)
+  - [Figuring Out the Company for You](/Presentations/CorporateFit)
 
 
 # Episode 4
