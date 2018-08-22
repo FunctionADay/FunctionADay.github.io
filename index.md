@@ -9,6 +9,8 @@ Epidsodes are listed from oldest to newest, and archived in the reverse.
 - [Episode 1 - isempty, and why this series needs to exist - 16/08/18](#episode-1)
 - [Episode 2 - A useful example of imread's transparency detection - 17/08/18](#episode-2)
 - [Episode 3 - How to name your variables, an instructional perspective - 20/08/18](#episode-3)
+- [Episode 4 - The one-true answer has always been GNU Octave](#episode-4)
+
 
 I've also got some writups, including presentations, on different topics that I've presented on. Normally for my (now former) TA comrades, or for the students of ENGI 1331.
 
