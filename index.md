@@ -29,7 +29,7 @@ A quick Google will yield plenty of results for the differences between MATLAB a
 - MATLAB has faster loops
 - Octave is faster for [non-looped stuff](http://octave.1599824.n4.nabble.com/Speed-of-Ocave-vs-Matlab-td4672488.html)
 - There are slight differences in syntax
--- There is a great [wiki](https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB) on some of the differences
+  - There is a great [wiki](https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB) on some of the differences
 - Octave supports some functions MATLAB does not, like `printf()`!!
 
 But the big wammy is that MATLAB has waaaaay better toolboxes. The documentation, testing, and availability of toolboxes is simply much stronger for MATLAB.
