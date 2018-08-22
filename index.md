@@ -8,21 +8,39 @@ Epidsodes are listed from oldest to newest, and archived in the reverse.
 
 - [Episode 1 - isempty, and why this series needs to exist - 16/08/18](#episode-1)
 - [Episode 2 - A useful example of imread's transparency detection - 17/08/18](#episode-2)
-- [Episode 3 - A not-so-basic guide to MATLAB naming convention - 20/08/18](#episode-3)
+- [Episode 3 - How to name your variables, an instructional perspective - 20/08/18](#episode-3)
+
+I've also got some writups, including presentations, on different topics that I've presented on. Normally for my (now former) TA comrades, or for the students of ENGI 1331.
+
+
+
 
 # Episode 4
-## Indexing in MATLAB and why indexing from 1 isn't the devil it is made to be
+## The one-true answer has always been GNU Octave
 
+Many of those who don't use MATLAB often lambast it for any number of reasons, not the least of which is the, admittedly exorbitant, cost. Fortunately there is a free (as in freedom and beer) alternative in GNU Octave, the MATLAB look-alike that might be one of the most deserving but least supported open-source projects there is.
 
+Octave is the humble open-source alternative to MATLAB. It uses identical syntax, has a now somewhat well featured GUI, and it aims to take a stab at its pay-to-play cousin. That being said, the operative word is that Octave *aims* to replace its cousin. 
 
+A quick Google will yield plenty of results for the differences between MATLAB and Octave, I'll do my best to summarize here:
 
+- MATLAB has faster loops
+- Octave is faster for [non-looped stuff](http://octave.1599824.n4.nabble.com/Speed-of-Ocave-vs-Matlab-td4672488.html)
+- There are slight differences in syntax
+-- There is a great [wiki](https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB) on some of the differences
+- Octave supports some functions MATLAB does not, like `printf()`!!
 
+But the big wammy is that MATLAB has waaaaay better toolboxes. The documentation, testing, and availability of toolboxes is simply much stronger for MATLAB.
 
+While I think that MATLAB is the perfect language for an engineer to start learning on, I'm still not sold that it's the end-all that MATHWORKS might sell it to be. Sure, there is tons that it can do. But if you ever really want to *do* something you're looking at a good ole chunk of MEX-code. Again, that's not to say that's a bad thing, but with any language the farther you go the less you can google.
 
+That's why Octave can be great. If you're only going to be working well within the limits of toolboxes and your own ingenuity then yes, MATLAB is the answer, the licenses aren't *that* expensive if your company is paying for it and it will save you tons of time and hassle. However if you know that you're going to be reaching beyond the extents of MATLAB's support, it's time to take a serious look at Octave as an alternative.
+
+Maybe you can convince your boss to let you get paid to contribute to the open source community. 
 
 
 # Episode 3
-## A not-so-basic guide to MATLAB naming convention
+## How to name your variables, an instructional perspective
 
 It's important in any language, but in MATLAB in particular, to make sure that you're not using a protected variable or function handles. MATLAB actually has a function ( `iskeyword` ) that returns a list if you ever forget which names you cannot use. This is great, but in these instances, MATLAB will actually stop you and tell you that you cannot use these in the way that you're trying to.
 
@@ -90,11 +108,11 @@ Array indices must be positive integers or logical values.
 from the workspace.
 ```
 
-And unfortunately googling for that error code is rather unhelpful. So now you're stuck explaining, "well of course you shouldn't have named it the same as a function, what were you thinking?" but that makes you seem *kinda* like a dick. Plus, even if you tell them this upfront, new users aren't going to have nearly the same level of encyclopedic knowledge of MATLAB function names to avoid. Fundamentally the problem with lowerCamelCase is that it necessitates lowercase first words and *many* of the functions new users to MATLAB will be encountering could (very reasonably) used as variable names. . So what's the solution?
+And while this isn't day-ending, now you're stuck explaining, "well of course you shouldn't have named it the same as a function, what were you thinking?" but that makes you seem *kinda* like a dick. Plus, even if you tell them this upfront, new users aren't going to have nearly the same level of encyclopedic knowledge of MATLAB function names to avoid. Fundamentally the problem with lowerCamelCase is that it necessitates lowercase first words and *many* of the functions new users to MATLAB will be encountering could (very reasonably) used as variable names. . So what's the solution?
 
 UpperCamelCase! Some will say well what about things like `VideoWriter` and then I would say "well what about things like `writeVideo`!!!
 
-My personal opinion is that if you teach UpperCamelCase to a new MATLAB user, by the time where they may encounter functions they can overwrite they will have already learned enough to debug their error.
+My personal opinion is that if you teach UpperCamelCase to a new MATLAB user, by the time where they may encounter functions they can overwrite they will have already learned enough to debug their error. In practice we taught "start your variables with a capital letter so you *"know"* that you're not overlapping with a function." It's worked out OK so far!
 
 
 # Episode 2
