@@ -2,7 +2,7 @@
 
 ## What is this site?
 
-This is the blog companion of [this YouTube Series.](linkherelol). Sub and click the bell to get all the notifications
+This is the blog companion to the thoughts in my head.
 
 Epidsodes are listed from oldest to newest, and archived in the reverse.
 
@@ -16,7 +16,7 @@ I've also got some writups, including presentations, on different topics that I'
 
 - [Presentations](/Presentations)
   - [Figuring Out the Company for You](/Presentations/CorporateFit)
-
+  - [Resume Tips for Engineering Students](/Presentations/ResumeAdvice)
 
 # Episode 4
 ## The one-true answer has always been GNU Octave
@@ -38,6 +38,8 @@ But the big wammy is that MATLAB has waaaaay better toolboxes. The documentation
 While I think that MATLAB is the perfect language for an engineer to start learning on, I'm still not sold that it's the end-all that MATHWORKS might sell it to be. Sure, there is tons that it can do. But if you ever really want to *do* something you're looking at a good ole chunk of MEX-code. Again, that's not to say that's a bad thing, but with any language the farther you go the less you can google.
 
 That's why Octave can be great. If you're only going to be working well within the limits of toolboxes and your own ingenuity then yes, MATLAB is the answer, the licenses aren't *that* expensive if your company is paying for it and it will save you tons of time and hassle. However if you know that you're going to be reaching beyond the extents of MATLAB's support, it's time to take a serious look at Octave as an alternative.
+
+While the work environment might not be as full featured in some aspects, it has several features that MATLAB's lacks like tab completion, and it is much more explicit in it's loop definitions. Plus, while this experience is annecdotal, I'm much less frustrated when there isn't an immediate answer to a problem I'm having online when I'm not forking over hundreds (or thousands) of dollarsfor stuff that doesn't "just work"
 
 Maybe you can convince your boss to let you get paid to contribute to the open source community. 
 
@@ -166,8 +168,6 @@ Well, that was 8 lines of code to clearly demonstrate!! Hope this little tutoria
 
 # Episode 1
 ## `isempty()`, and why this series needs to exist
-
-To watch this demonstration visit []()
 
 First, what is `isempty()` well, just as the name implies it's the MATLAB function for checking if an array is empty. That's it. It doesn't check for what type of array it is, it just checks if there is something there and then says "ok cool, yep there's is(n't) something there"
 
