@@ -10,7 +10,7 @@ Epidsodes are listed from oldest to newest, and archived in the reverse.
 - [Episode 2 - A useful example of imread's transparency detection - 17/08/18](#episode-2)
 - [Episode 3 - How to name your variables, an instructional perspective - 20/08/18](#episode-3)
 - [Episode 4 - The one-true answer has always been GNU Octave](#episode-4)
-
+- [Episode 5 - Why A=12 - 1/3/19](#episode-5)
 
 I've also got some writups, including presentations, on different topics that I've presented on. Normally for my (now former) TA comrades, or for the students of ENGI 1331.
 
@@ -21,6 +21,11 @@ I've also got some writups, including presentations, on different topics that I'
 # Episode 5
 ## Why A = 12
 
+One of the things that you need to do when you're TAing, or I'd assume in any teaching role, is have go-to examples for explaining certain topics. When teaching topics in a MATLAB course that means examples that are often require simple math and matricies.
+
+When teaching matricies, I've found that a 3x4 or 4x3 matrix is usually ideal. The primary reason is that it's NOT a square. Square matrices are great, and necessary, but they can cause alot of confusion (indexing, much harder to teach transpose, etc.). A 4x3 is also small enough that even if you had it full of numbers and wanted to do division on it, you can do it relatively quickly. 4x3s are big enough though, that you can do 3-4 of an operation and have the student do the rest, so they have a good sample of examples before trying on their own.
+
+So why do I use A=12? For similar reasons really. 12 is divisable by 2, 3, 4, and 6, even dividing by other numbers smaller than it (when teaching floor/ciel) is relatively simple and the arithmatic is easy enough to do in your head. It's also not a 1 or 0 (interupts with logicals) 2, 3, 4, 5 (which all have no or a limited number of divisers). 6 is tempting, but like a 2x3 it's just a bit too small, 7 and 11 are prime, 10 has only 2 divisors, and 8 and 9 only have 1 diviser! 12 is the first "good" number.
 
 # Episode 4
 ## The one-true answer has always been GNU Octave
